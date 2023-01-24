@@ -8,7 +8,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/cartv1
     username: cartv1dbadmin
-    password: cartv1dbadminpwd
+    password: cartv1dbadmin****
 
   graphql:
     graphiql:
