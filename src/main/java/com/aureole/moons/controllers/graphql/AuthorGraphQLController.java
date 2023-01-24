@@ -30,7 +30,8 @@ public class AuthorGraphQLController {
 
     @BatchMapping
     Map<Author,Set<Book>> books(Set<Author> authorSet){
-
+        //<<TODO>> Get all Books in a single query.....
+        // <<TODO>> Below one method does not solve N+1 problem.
         Map<Author,Set<Book>> authorBooks = new HashMap();
         authorBooks.putAll(  authorSet.stream().collect(Collectors.toMap(author -> author, author -> {
             return this.bookRepository.findByAuthor((Author) author);
